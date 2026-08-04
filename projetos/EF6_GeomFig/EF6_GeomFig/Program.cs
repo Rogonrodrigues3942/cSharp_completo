@@ -18,7 +18,7 @@ namespace EF6_GeomFig
             //cálculos de figuras geométricas
             double triRet = (a * c) / 2;
             double circ = Math.Pow(c, 2) * pi;
-            double trap = (( a + b) * c) / 2;
+            double trap = ((a + b) * c) / 2;
             double sqr = Math.Pow(b, 2);
             double retangule = a * b;
 
