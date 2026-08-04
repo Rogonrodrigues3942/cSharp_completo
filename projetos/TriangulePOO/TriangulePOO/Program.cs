@@ -28,6 +28,7 @@ namespace TriangulePOO
             //Processando cálculos de áreas de X e Y
             double areaX = x.Area();
 
+
             double areaY = y.Area();
 
             //Saída no terminal
