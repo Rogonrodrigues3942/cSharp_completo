@@ -6,9 +6,10 @@ namespace StaticConversion
 {
     class Conversion
     {
+        public static double tax = 1.06;
         public static double CurrencyConversion(double quotation, double dolars)
         {
-            return quotation * (dolars * 1.06);
+            return quotation * (dolars * tax);
         }
     }
 }
