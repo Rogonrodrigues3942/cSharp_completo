@@ -10,14 +10,13 @@ namespace MetEstatico1
 
             Console.Write("Entre com valor do raio: ");
             double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Calculadora calc = new Calculadora();
 
-            double circunferencia = calc.Circunferencia(raio);
-            double vol = calc.Volume(raio);
+            double circunferencia = Calculadora.Circunferencia(raio);
+            double vol = Calculadora.Volume(raio);
 
             Console.WriteLine("\nCircunferencia: " + circunferencia.ToString("F3", CultureInfo.InvariantCulture));
             Console.WriteLine("\nVolume: " + vol.ToString("F3", CultureInfo.InvariantCulture));
-            Console.WriteLine("\nPi; " + calc.Pi.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("\nPi; " + Calculadora.Pi.ToString("F3", CultureInfo.InvariantCulture));
 
         }
 
