@@ -14,13 +14,13 @@ namespace Problem2
             Console.Write("Insira o nome do produto: ");
             string prodName = Console.ReadLine();
 
-            Console.Write("Insira a quantidade: ");
-            int quantity = int.Parse(Console.ReadLine());
+            //Console.Write("Insira a quantidade: ");
+            //int quantity = int.Parse(Console.ReadLine());
 
             Console.Write("Insira o preço: ");
             double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Product p = new Product(prodName, quantity, price);
+            Product p = new Product(prodName, price);
 
             Console.WriteLine($"\nDados do produto: {p}");
 
