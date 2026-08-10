@@ -21,6 +21,8 @@ namespace Problem2
             Quantity = 5;
         }
 
+        public Product() { }
+
         public double ValorTotalEmEstoque()
         {
             return Price * Quantity;
