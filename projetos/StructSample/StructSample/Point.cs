@@ -1,0 +1,9 @@
+﻿
+
+namespace StructSample
+{
+     struct Point
+    {
+
+    }
+}
