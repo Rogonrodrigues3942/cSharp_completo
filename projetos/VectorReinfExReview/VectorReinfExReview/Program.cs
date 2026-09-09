@@ -52,8 +52,6 @@ namespace VectorReinfExReview
                 }
             }
 
-
-
             if (count > 0)
             {
                 Console.WriteLine("\nBusy rooms list: \n");
