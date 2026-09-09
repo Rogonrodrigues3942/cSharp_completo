@@ -52,20 +52,23 @@ namespace VectorReinfExReview
                 }
             }
 
-            //Console.WriteLine(count);
+
 
             if (count > 0)
             {
                 Console.WriteLine("\nBusy rooms list: \n");
                 for (int i = 0; i < n; i++)
                 {
-                    Console.Write("\n" + room[i]);
+                    if (room[i] != null)
+                        Console.Write("\n" + room[i]);
                 }
             }
             else
             {
                 Console.WriteLine($"\nO pensionato não alugou nenhum dormitório.");
             }
+
+            Console.WriteLine("\n");
         }
     }
 }
