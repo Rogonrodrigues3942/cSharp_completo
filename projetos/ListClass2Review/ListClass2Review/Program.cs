@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+using System.Xml.Linq;
 
 namespace ListClass2Review
 {
@@ -34,6 +37,7 @@ namespace ListClass2Review
                 Console.WriteLine(pes);
             }
 
+            Console.WriteLine("\n\n----------------------------------------------------\n");
             Console.WriteLine("\n\nUtilizando o método 'Insert()' na lista 1.\n");
             lista1.Insert(2, "Marco");
             foreach (string pes in lista1)
@@ -41,12 +45,41 @@ namespace ListClass2Review
                 Console.WriteLine(pes);
             }
 
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+
             Console.WriteLine($"\n\nA lista nº 1 possui {lista1.Count()} elementos.\n\n");
 
-            Console.WriteLine("\n\nEncontrar o primeiro da lista que satisfaça um predicado: \r\n");
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+            Console.WriteLine("\n\n1) Encontrar o primeiro da lista que satisfaça um predicado: \r\n");
+
+            string s1 = lista1.Find(x => x[0] == 'A');
+            Console.WriteLine("Primeiro nome que começa com 'A': " + s1);
+
+            string s2 = lista1.Find( x => x[1] == 'a');
+            Console.WriteLine("Primeiro nome que contenha 'a' na segunda posição: " + s2);
+
+            string s3 = lista1.Find( x => x[2] == 'b');
+            Console.WriteLine("Primeiro nome que contenha 'b' na terceira posição: " + s3);
+
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+            Console.WriteLine("\n\n2)Encontrar o último elementos da lista que satisfaça um predicado: \r\n");
+
+            string s4 = lista1.FindLast(x => x[0] == 'A');
+            Console.WriteLine("Último  nome que começa com 'A': " + s4);
+
+            string s5 = lista1.FindLast( x => x[1] == 'a');
+            Console.WriteLine("Último nome que contenha 'a' na segunda posição: " + s5);
+
+            string s6 = lista1.FindLast( x => x[2] == 'b');
+            Console.WriteLine("Primeiro nome que contenha 'b' na terceira posição: " + s6);
 
 
-            Console.WriteLine("\n\nEncontrar o último elementos da lista que satisfaça um predicado: \r\n");
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+            Console.WriteLine("\n3) Encontrar primeira posição de elemento da lista que satisfaça um predicado: list.FindIndex \n");
+
+
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+            Console.WriteLine("\n4) Encontrar última posição de elemento da lista que satisfaça um predicado: list.FindLastIndex \n");
 
 
         }
