@@ -55,10 +55,10 @@ namespace ListClass2Review
             string s1 = lista1.Find(x => x[0] == 'A');
             Console.WriteLine("Primeiro nome que começa com 'A': " + s1);
 
-            string s2 = lista1.Find( x => x[1] == 'a');
+            string s2 = lista1.Find(x => x[1] == 'a');
             Console.WriteLine("Primeiro nome que contenha 'a' na segunda posição: " + s2);
 
-            string s3 = lista1.Find( x => x[2] == 'b');
+            string s3 = lista1.Find(x => x[2] == 'b');
             Console.WriteLine("Primeiro nome que contenha 'b' na terceira posição: " + s3);
 
             Console.WriteLine("\n\n----------------------------------------------------\n");
@@ -67,20 +67,50 @@ namespace ListClass2Review
             string s4 = lista1.FindLast(x => x[0] == 'A');
             Console.WriteLine("Último  nome que começa com 'A': " + s4);
 
-            string s5 = lista1.FindLast( x => x[1] == 'a');
+            string s5 = lista1.FindLast(x => x[1] == 'a');
             Console.WriteLine("Último nome que contenha 'a' na segunda posição: " + s5);
 
-            string s6 = lista1.FindLast( x => x[2] == 'b');
+            string s6 = lista1.FindLast(x => x[2] == 'b');
             Console.WriteLine("Primeiro nome que contenha 'b' na terceira posição: " + s6);
 
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+            foreach (string name in lista1)
+            {
+                Console.WriteLine(name);
+            }
 
             Console.WriteLine("\n\n----------------------------------------------------\n");
             Console.WriteLine("\n3) Encontrar primeira posição de elemento da lista que satisfaça um predicado: list.FindIndex \n");
-
+            int s7 = lista1.FindIndex(x => x[0] == 'A');
+            Console.WriteLine("First position with word is 'A': " + s7);
 
             Console.WriteLine("\n\n----------------------------------------------------\n");
             Console.WriteLine("\n4) Encontrar última posição de elemento da lista que satisfaça um predicado: list.FindLastIndex \n");
+            int s8 = lista1.FindLastIndex(x => x[0] == 'A');
+            Console.WriteLine("Last position with word is 'A': " + s8);
 
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+            Console.WriteLine("\n5) Filtrar a lista com base em um predicado.\n");
+            List<string> lista3 = lista1.FindAll(x => x.Length == 5);
+            foreach (string name in lista3)
+            {
+                Console.WriteLine(name);
+            }
+            
+
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+            Console.WriteLine("Remover elementos da lista: Remove");
+
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+            Console.WriteLine("Remover elementos da lista: RemoveAll");
+
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+            Console.WriteLine("Remover elementos da lista: RemoveAt, ");
+
+            Console.WriteLine("\n\n----------------------------------------------------\n");
+            Console.WriteLine("Remover elementos da lista: RemoveRange");
+
+            Console.WriteLine("\n\n----------------------------------------------------\n");
 
         }
     }
