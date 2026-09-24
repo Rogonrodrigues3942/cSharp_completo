@@ -100,15 +100,30 @@ namespace ListClass2Review
 
             Console.WriteLine("\n\n----------------------------------------------------\n");
             Console.WriteLine("Remover elementos da lista: Remove");
+            foreach(string name in lista1) {  Console.WriteLine(name); }
+            lista1.Remove("Alex");
+            foreach(string name in lista1) {  Console.WriteLine(name); }
 
             Console.WriteLine("\n\n----------------------------------------------------\n");
             Console.WriteLine("Remover elementos da lista: RemoveAll");
+            foreach(string name in lista1) {  Console.WriteLine(name); }
+            lista1.RemoveAll(x => x[0] == 'M');
+            Console.WriteLine("\n");
+            foreach(string name in lista1) {  Console.WriteLine(name); }
 
             Console.WriteLine("\n\n----------------------------------------------------\n");
             Console.WriteLine("Remover elementos da lista: RemoveAt, ");
+            foreach(string name in lista1) {  Console.WriteLine(name); }
+            lista1.RemoveAt(0);
+            Console.WriteLine("\n");
+            foreach(string name in lista1) {  Console.WriteLine(name); }
 
             Console.WriteLine("\n\n----------------------------------------------------\n");
             Console.WriteLine("Remover elementos da lista: RemoveRange");
+            foreach(string name in lista1) {  Console.WriteLine(name); }
+            lista1.RemoveRange(0,1);
+            Console.WriteLine("\n");
+            foreach(string name in lista1) {  Console.WriteLine(name); }
 
             Console.WriteLine("\n\n----------------------------------------------------\n");
 
