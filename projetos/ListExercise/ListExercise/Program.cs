@@ -12,6 +12,7 @@ namespace ListExercise
 
             Console.Write("\nEntre com o tamanho da lista de colaboradores: ");
             int n = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
             //Criando a lista de funcionpario para teste.
             List<Employee> empList = new List<Employee>();
 
