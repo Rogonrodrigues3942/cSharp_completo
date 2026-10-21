@@ -45,6 +45,7 @@ namespace ListExercise
 
             }
 
+            Console.WriteLine("\nLista antes do aumento:\n");
             foreach (Employee employee in empList)
             {
                 Console.WriteLine("\n");
@@ -53,6 +54,28 @@ namespace ListExercise
 
 
             //trabalhando o aumento de salário
+            Console.WriteLine("\n localizar o colaborador e reajuste salário:\n");
+            Console.Write("Digite o id do colaborador para reajuste salarial: ");
+            int increaseId = int.Parse(Console.ReadLine());
+            Console.Write("Digite o índice de reajuste: ");
+            double index = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Employee increment = empList.Find(emp => emp.Id == increaseId);
+
+            if (increment != null)
+            {
+                Console.WriteLine($"\nLocalizado colaborador: {increment}");
+                double adjusment = (index /100) + 1;
+                increment.Salary *= adjusment ;
+                Console.WriteLine($"\nSalario de incrementado: {increment.Salary}");
+            }
+
+            Console.WriteLine("\nNova lista apresentando o reajuste para o colaborador: ");
+            foreach (Employee employee in empList)
+            {
+                Console.WriteLine("\n");
+                Console.WriteLine(employee);
+            }
+
             //Console.Write("\nInsira o índice de reajuste salarial:  ");
             //double x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             //Console.WriteLine($"O reajuste salarial é de {x:F2}%");
