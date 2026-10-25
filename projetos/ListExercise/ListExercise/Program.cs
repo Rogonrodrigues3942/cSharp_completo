@@ -64,8 +64,8 @@ namespace ListExercise
             if (increment != null)
             {
                 Console.WriteLine($"\nLocalizado colaborador: {increment}");
-                double adjusment = (index /100) + 1;
-                increment.Salary *= adjusment ;
+                double adjusment = (index / 100) + 1;
+                increment.Salary *= adjusment;
                 Console.WriteLine($"\nSalario de incrementado: {increment.Salary}");
             }
 
@@ -75,12 +75,6 @@ namespace ListExercise
                 Console.WriteLine("\n");
                 Console.WriteLine(employee);
             }
-
-            //Console.Write("\nInsira o índice de reajuste salarial:  ");
-            //double x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            //Console.WriteLine($"O reajuste salarial é de {x:F2}%");
-            //Employee adjustment = new Employee();
-            //double index = adjustment.Index(x);
 
         }
     }
