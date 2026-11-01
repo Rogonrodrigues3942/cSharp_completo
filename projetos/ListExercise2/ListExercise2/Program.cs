@@ -8,17 +8,17 @@ namespace ListExercise2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Exercício de Lista (aulas 77 e 78)");
+            Console.WriteLine("Exercício de Lista (aulas: 77 e 78)");
 
             //1 - Fazer um programa para ler um número inteiro N e 
             Console.Write("\nDigite o tamanho da lista:  ");
             int size = int.Parse(Console.ReadLine());
-            Console.WriteLine($"O tamanho da lista é: {size}");
+            Console.WriteLine($"O tamanho da lista é: {size} registro(s).");
 
-            //2 - criada a lista de colaboradores
+            //2 - Criada a lista da classe de colaboradores
             List<Employee> empList = new List<Employee>();
 
-            //3 - Inserir os dados(id, nome e salario) de N funcionários na lista Employee.
+            //3 - Cadastrar colaboradores. Inserir os dados(id, nome e salario) de N funcionários na lista Employee.
             int n = 0;
             while (n < size)
             {
@@ -42,7 +42,7 @@ namespace ListExercise2
                 }
                 else
                 {
-                    Console.WriteLine($"O id: '{id}' está cadastrado na lista.");
+                    Console.WriteLine($"O id: '{id}' está cadastrado na lista. Insira funcionário com novo id.");
 
                 }
 
@@ -57,12 +57,11 @@ namespace ListExercise2
 
             //5 - Em seguida, efetuar o aumento de X por cento no salário de um determinado funcionário.
             //6 - Para isso, o programa deve ler um id e o valor X.
-            //7 - Se o id informado não existir, mostrar uma mensagem e abortar a operação.
+            //7 - Se o id informado não existir, mostrar uma mensagem e informar um id válido cadastrado na lista.
+
             bool increment = true;
             while (increment)
             {
-
-
                 Console.Write("\nDigite o id para aumento: ");
                 int idIncrement = int.Parse(Console.ReadLine());
                 Employee incrementSalary = empList.Find(e => e.Id == idIncrement);
@@ -79,7 +78,7 @@ namespace ListExercise2
                 }
                 else
                 {
-                    Console.WriteLine("Not found the employee!");
+                    Console.WriteLine("Not found employee! Locate recorded employee by id validated.");
                 }
 
             }
